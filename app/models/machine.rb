@@ -8,4 +8,12 @@ class Machine < ApplicationRecord
   def average_snack_price
     snacks.average(:price)
   end
+
+  def snack_count
+    if snacks.empty?
+      0
+    else
+      snacks.count
+    end
+  end
 end

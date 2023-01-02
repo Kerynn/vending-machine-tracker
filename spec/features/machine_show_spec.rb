@@ -39,7 +39,7 @@ RSpec.describe "Vending Machine" do
       MachineSnack.create!(machine_id: dons_drinks.id, snack_id: oreos.id)
 
       visit "/machines/#{dons_drinks.id}"
-save_and_open_page
+
       expect(page).to have_content("Average Price: $2.50")
     end
   end
